@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Surpresa 🎁</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align:center;
+        background:#f5f5f5;
+        padding:60px 20px;
+    }
+
+    button{
+        padding:15px 30px;
+        font-size:22px;
+        background:#00c853;
+        color:white;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin-top:20px;
+    }
+
+    img{
+        margin-top:30px;
+        max-width:90%;
+        border-radius:15px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.2);
+        display:none;
+    }
+
+    #mensagem{
+        font-size:24px;
+        margin-top:20px;
+        display:none;
+    }
+
+    #botao2{
+        display:none;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Tenho uma surpresa pra você</h1>
+
+<button id="botao1" onclick="primeiraEtapa()">Abrir presente 🎁</button>
+
+<br>
+<img id="imagem1" src="imagem1.png">
+
+<div id="mensagem">
+    <p>Pegadinha de irmão 💚</p>
+</div>
+
+<button id="botao2" onclick="segundaEtapa()">Ver presente final 🎉</button>
+
+<br>
+<img id="imagem2" src="imagem2.png">
+
+<script>
+function primeiraEtapa(){
+    document.getElementById("botao1").style.display="none";
+    document.getElementById("imagem1").style.display="block";
+    document.getElementById("mensagem").style.display="block";
+    document.getElementById("botao2").style.display="inline-block";
+}
+
+function segundaEtapa(){
+    document.getElementById("imagem2").style.display="block";
+    document.getElementById("botao2").style.display="none";
+}
+</script>
+
+</body>
+</html>
