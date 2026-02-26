@@ -45,7 +45,7 @@
 
 <body>
 
-<h1>Tenho uma surpresa pra você</h1>
+<h1 id="titulo">Tenho uma surpresa pra você 😄</h1>
 
 <button id="botao1" onclick="primeiraEtapa()">Abrir presente 🎁</button>
 
@@ -67,11 +67,22 @@ function primeiraEtapa(){
     document.getElementById("imagem1").style.display="block";
     document.getElementById("mensagem").style.display="block";
     document.getElementById("botao2").style.display="inline-block";
+
+    // some após 20s
+    setTimeout(function(){
+        document.getElementById("imagem1").style.display="none";
+    }, 15000);
 }
 
 function segundaEtapa(){
-    document.getElementById("imagem2").style.display="block";
+    // limpar tela inteira
+    document.getElementById("titulo").style.display="none";
+    document.getElementById("mensagem").style.display="none";
+    document.getElementById("imagem1").style.display="none";
     document.getElementById("botao2").style.display="none";
+
+    // mostrar só a imagem final
+    document.getElementById("imagem2").style.display="block";
 }
 </script>
 
